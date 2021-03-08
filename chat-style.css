@@ -1,0 +1,25 @@
+body {
+  background-color: #5bbb73
+}
+
+h1 {
+  color: black;
+}
+
+#chat-window {
+  background-color: black;
+  color: white;
+  width: 600px;
+  height: 600px;
+  border: 2px solid blanchedalmond;
+  padding: 5px 5px 5px 10px;
+}
+
+#type-here {
+  background-color: black;
+  color: white;
+  width: 600px;
+  height: 40px;
+  border: 2px solid blanchedalmond;
+  padding: 5px 5px 5px 10px;
+}
