@@ -9,12 +9,25 @@
 </head>
 <body>
   <H1>Gratia</H1>
+
   <div id="chat-window">
-    "Hello, I'm Gratia"
+    
+    "Hello, I'm Gratia"<br>
+    <span id="replyText"></span>
   </div>
   &nbsp;<br>
-  <div id="type-here">
+  Type Here:<br>
+  <input type="text" id="type-here" name="type-here"> 
+  <button onclick="myFunction()">Send</button>
+
     
   </div>
 </body>
+
+<script>
+  function myFunction() {
+    var inpObj = document.getElementById("type-here").value;
+    document.getElementById("replyText").innerHTML = '"' + inpObj + '"';
+  }
+</script>
 </html>
