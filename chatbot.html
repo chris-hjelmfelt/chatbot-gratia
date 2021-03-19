@@ -11,8 +11,7 @@
   <H1>Gratia</H1>
 
   <div id="chat-window">
-    
-    "Hello, I'm Gratia"<br>
+    "Hello, I'm Gratia"
     <span id="replyText"></span>
   </div>
   &nbsp;<br>
@@ -27,7 +26,8 @@
 <script>
   function myFunction() {
     var inpObj = document.getElementById("type-here").value;
-    document.getElementById("replyText").innerHTML = '"' + inpObj + '"';
+    var currText = document.getElementById("replyText").innerHTML;
+    document.getElementById("replyText").innerHTML = currText + '\r\n"' + inpObj + '"';
   }
 </script>
 </html>

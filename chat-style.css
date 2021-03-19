@@ -13,7 +13,7 @@ h1 {
   height: 600px;
   border: 2px solid blanchedalmond;
   padding: 5px 5px 5px 10px;
-  line-height: 1.5;
+  line-height: 1.5;  
 }
 
 #type-here {
@@ -27,4 +27,5 @@ h1 {
 
 #replyText {
   color: rgb(54, 230, 255);
+  white-space: pre-line;
 }
