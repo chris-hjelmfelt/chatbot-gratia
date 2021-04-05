@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat-style.css">
+  <title>Chatbot Gratia</title>
+</head>
+<body>
+  <H1>Chat Bot</H1>
+
+  Gratia:<br>
+  <div id="chat-bar-gratia">
+    <span id="1" class="chatText"></span><br>
+  </div>
+  &nbsp;<br>
+  You:<br>
+  <input type="text" id="type-here" name="type-here"> 
+  <button onclick="playerSays()">Send</button>
+
+    
+  </div>
+</body>
+
+<script>
+  var playerText
+  setTimeout(welcome, 1000);
+
+  function welcome()
+  {
+    document.getElementById("1").innerHTML = "Hello, I'm Gratia";
+  }
+
+  function playerSays() {     
+    playerText = document.getElementById("type-here").value;    
+    setTimeout(gratiaReply, 2000);
+  }
+
+  function gratiaReply(){  // str.search() returns the location of the start of the string if found
+    if (playerText.search(/hello/i) >= 0){
+      console.log("how");
+      document.getElementById("1").innerHTML = "How are you?";
+    } else if (playerText.search(/good/i) >= 0){
+      console.log("good");
+      document.getElementById("1").innerHTML = "Good. What are you up to today?";
+    } else {
+      console.log("tell");
+      document.getElementById("1").innerHTML = "Tell me more";
+    }
+  }
+</script>
+</html>

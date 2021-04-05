@@ -11,8 +11,18 @@
   <H1>Gratia</H1>
 
   <div id="chat-window">
-    "Hello, I'm Gratia"
-    <span id="replyText"></span>
+    <span id="1" class="chatText"></span><br>
+    <span id="2" class="chatText"></span><br>
+    <span id="3" class="chatText"></span><br>
+    <span id="4" class="chatText"></span><br>
+    <span id="5" class="chatText"></span><br>    
+    <span id="6" class="chatText"></span><br>    
+    <span id="7" class="chatText"></span><br>    
+    <span id="8" class="chatText"></span><br>
+    <span id="9" class="chatText"></span><br>
+    <span id="10" class="chatText"></span><br>
+    <span id="11" class="chatText"></span><br>
+    <span id="12" class="chatText"></span><br>
   </div>
   &nbsp;<br>
   Type Here:<br>
@@ -24,10 +34,27 @@
 </body>
 
 <script>
+  var trackNum = 2;
+  var currText = document.getElementById("2");
+  var nextText = document.getElementById("3");
+  setTimeout(welcome, 1000);
+
+  function welcome()
+  {
+    document.getElementById("1").innerHTML = "Hello, I'm Gratia";
+  }
+
   function myFunction() {
     var inpObj = document.getElementById("type-here").value;
-    var currText = document.getElementById("replyText").innerHTML;
-    document.getElementById("replyText").innerHTML = currText + '\r\n"' + inpObj + '"';
+    currText.innerHTML = inpObj;  // currText + '\r\n"' + inpObj + '"'
+    setTimeout(gratiaReply, 2000);
+    currText = document.getElementById("4");
+  }
+
+  function gratiaReply(){
+    console.log("reply");
+    nextText.innerHTML = 'Tell me more';
+    nextText = document.getElementById("5");
   }
 </script>
 </html>
