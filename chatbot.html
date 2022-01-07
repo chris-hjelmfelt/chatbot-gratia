@@ -23,17 +23,20 @@
     <span id="10" class="chatText"></span><br>
     <span id="11" class="chatText"></span><br>
     <span id="12" class="chatText"></span><br>
+    <div id="resizer"></div>
   </div>
   &nbsp;<br>
   Type Here:<br>
   <input type="text" id="type-here" name="type-here"> 
   <button onclick="myFunction()">Send</button>
 
-    
-  </div>
 </body>
 
+
+
 <script>
+  const expandable = document.getElementById('chat-window')
+  const sizer = document.getElementById('resizer')
   var trackNum = 2;
   var currText = document.getElementById("2");
   var nextText = document.getElementById("3");
@@ -55,6 +58,22 @@
     console.log("reply");
     nextText.innerHTML = 'Tell me more';
     nextText = document.getElementById("5");
+  }
+
+  
+  // expandable window functions
+  sizer.addEventListener('mousedown', function(e) { 
+      e.preventDefault() 
+      window.addEventListener('mousemove', resize)
+      window.addEventListener('mouseup', stopResize)
+  })
+
+  function resize(e) {
+    expandable.style.width = e.pageX - expandable.getBoundingClientRect().left + 'px'
+  }
+
+  function stopResize() {
+    window.removeEventListener('mousemove', resize)
   }
 </script>
 </html>

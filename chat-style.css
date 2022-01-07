@@ -6,11 +6,12 @@ h1 {
   color: black;
 }
 
-#chat-window {
+#chat-window {  
+  position: relative;
   background-color: black;
   color: rgb(244, 138, 248);
   width: 600px;
-  height: 600px;
+  height: 500px;
   border: 2px solid blanchedalmond;
   padding: 5px 5px 5px 10px;
   line-height: 1.5;  
@@ -41,4 +42,14 @@ h1 {
 #2{
   color: rgb(94, 255, 54);
   white-space: pre-line;
+}
+
+#resizer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid blue;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
