@@ -31,7 +31,7 @@ h1 {
   color: rgb(54, 230, 255);
   width: 600px;
   height: 40px;
-  border: 2px solid blanchedalmond;
+  border: 2px solid hsl(36, 100%, 90%);
   padding: 0px 5px 0px 10px;
 }
 
@@ -45,11 +45,11 @@ h1 {
 }
 
 #resizer {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid blue;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 0px;
+  bottom: 0px;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #ffebcd 50% 58%, rgba(0, 0, 0, 0) 58% 74%, #ffebcd 74% 82%, rgba(0, 0, 0, 0) 76%);
+  cursor: ew-resize;
 }
